@@ -147,17 +147,7 @@ rank_accuracies_l = []
 mAP_l = []
 metric_l = []
 
-import cv2
-# histogram
-from skimage.feature import hog
-from skimage import io
-for i in range(0,200):
-    b = np.reshape(X_test[:,i],(46,56))
-    normalised_blocks, x = hog(b, orientations=9, pixels_per_cell=(8, 8), cells_per_block=(3, 3),
-        block_norm='L2-Hys', visualize=True, transform_sqrt=True,
-        feature_vector = True, multichannel=None)
-    plt.show(x)
-    X_test[:,i] = x.ravel()
+
 
 # i = 0
 # histogram=[]
